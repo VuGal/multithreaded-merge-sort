@@ -1,8 +1,15 @@
 #include "mergeSortFunctions.h"
 
-// Merges two subarrays of array[].
-// First subarray is arr[begin..mid]
-// Second subarray is arr[mid+1..end]
+
+/** Merges two subarrays of integer array:
+ *  first subarray: from begin to mid
+ *  second subarray: from mid+1 to right
+ *
+ *  @param[in] &array   reference to the array on which the merge algorithm will work
+ *  @param[in] left     lower bound of the array
+ *  @param[in] mid      middle of the array
+ *  @param[in] right    upper bound of the array
+ */
 void merge(std::vector<int> &array, int const left, int const mid, int const right)
 {
     auto const subArrayOne = mid - left + 1;
@@ -18,11 +25,11 @@ void merge(std::vector<int> &array, int const left, int const mid, int const rig
     for (auto j = 0; j < subArrayTwo; j++)
         rightArray[j] = array[mid + 1 + j];
 
-    auto indexOfSubArrayOne = 0, // Initial index of first sub-array
-        indexOfSubArrayTwo = 0; // Initial index of second sub-array
+    auto indexOfSubArrayOne = 0,   // Initial index of first sub-array
+        indexOfSubArrayTwo = 0;    // Initial index of second sub-array
     int indexOfMergedArray = left; // Initial index of merged array
 
-    // Merge the temp arrays back into array[left..right]
+    // Merge the temp arrays back into the main array (from "left" to "right")
     while (indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo) {
         if (leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]) {
             array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
@@ -50,9 +57,13 @@ void merge(std::vector<int> &array, int const left, int const mid, int const rig
     }
 }
 
-// begin is for left index and end is
-// right index of the sub-array
-// of arr to be sorted */
+
+/** Performs merge sort algorithm
+ *
+ *  @param[in] &array   reference to the array on which the merge sort algorithm will work
+ *  @param[in] begin    lower bound of the array
+ *  @param[in] end    upper bound of the array
+ */
 void mergeSort(std::vector<int> &array, int const begin, int const end)
 {
 	if (begin < end) {

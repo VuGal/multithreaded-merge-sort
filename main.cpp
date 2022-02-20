@@ -220,9 +220,10 @@ int main(int argc, char **argv) {
 
 	std::ofstream outputfile("sortedElements.txt");
 	if (outputfile.is_open()) {
-		for (int i = 0; i < elementsToSortCount; ++i) {
-			outputfile << elementsToSort[i] << "\n";
+		for (auto &sortedElement : elementsToSort) {
+			outputfile << sortedElement << "\n";
 		}
+		outputfile.close();
 	}
 	else {
 		std::cout << "Error! Can't save the output file." << std::endl;

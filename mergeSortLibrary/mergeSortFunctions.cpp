@@ -41,15 +41,15 @@ void merge(std::vector<int> &array, int const left, int const mid, int const rig
         }
         indexOfMergedArray++;
     }
-    // Copy the remaining elements of
-    // left[], if there are any
+
+    // Copy the remaining elements of leftArray[], if there are any
     while (indexOfSubArrayOne < subArrayOne) {
         array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
         indexOfSubArrayOne++;
         indexOfMergedArray++;
     }
-    // Copy the remaining elements of
-    // right[], if there are any
+
+    // Copy the remaining elements of rightArray[], if there are any
     while (indexOfSubArrayTwo < subArrayTwo) {
         array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
         indexOfSubArrayTwo++;
@@ -62,7 +62,7 @@ void merge(std::vector<int> &array, int const left, int const mid, int const rig
  *
  *  @param[in] &array   reference to the array on which the merge sort algorithm will work
  *  @param[in] begin    lower bound of the array
- *  @param[in] end    upper bound of the array
+ *  @param[in] end      upper bound of the array
  */
 void mergeSort(std::vector<int> &array, int const begin, int const end)
 {

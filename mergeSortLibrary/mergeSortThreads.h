@@ -1,5 +1,5 @@
-#ifndef MERGESORTLIBRARY_MERGESORTTHREADS_H_
-#define MERGESORTLIBRARY_MERGESORTTHREADS_H_
+#ifndef MERGESORTTHREADS_H_
+#define MERGESORTTHREADS_H_
 
 /**
  *  When this class is instantiated, it performs a merge sort algorithm on the array with
@@ -95,4 +95,4 @@ private:
 };
 
 
-#endif /* MERGESORTLIBRARY_MERGESORTTHREADS_H_ */
+#endif /* MERGESORTTHREADS_H_ */

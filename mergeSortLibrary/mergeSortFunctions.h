@@ -1,5 +1,5 @@
-#ifndef MERGESORTLIBRARY_MERGESORTFUNCTIONS_H_
-#define MERGESORTLIBRARY_MERGESORTFUNCTIONS_H_
+#ifndef MERGESORTFUNCTIONS_H_
+#define MERGESORTFUNCTIONS_H_
 
 #include <vector>
 
@@ -8,4 +8,4 @@ void merge(std::vector<int> &array, int const left, int const mid, int const rig
 void mergeSort(std::vector<int> &array, int const begin, int const end);
 
 
-#endif /* MERGESORTLIBRARY_MERGESORTFUNCTIONS_H_ */
+#endif /* MERGESORTFUNCTIONS_H_ */
